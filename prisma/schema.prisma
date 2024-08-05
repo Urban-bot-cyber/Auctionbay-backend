@@ -20,10 +20,27 @@ model User {
   last_name   String?
   avatar      String?
   password    String
-
+  items       Item[]
 
   created_At  DateTime  @default(now())
   updated_At  DateTime  @default(now()) @updatedAt
 
   @@map("user")
+}
+
+
+model Item {
+  id              String    @id @default(uuid())
+  title           String  
+  description     String?  
+  starting_price  Int
+  end_date        DateTime
+  image           String?
+  user            User      @relation(fields: [user_id], references: [id])
+  user_id         String    
+
+  created_At  DateTime  @default(now())
+  updated_At  DateTime  @default(now()) @updatedAt
+
+  @@map("item")
 }
