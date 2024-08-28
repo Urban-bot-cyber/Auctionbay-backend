@@ -11,7 +11,7 @@ export class ItemEntity implements Item {
     @ApiProperty()
     updated_At: Date
 
-    @ApiProperty()
+    @ApiProperty({required: true})
     title: string
 
     @ApiProperty()

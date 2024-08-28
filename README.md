@@ -1,73 +1,70 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+## AuctionBay Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to the AuctionBay backend repository! This repository contains the backend codebase for the AuctionBay web application, built using NestJS.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Table of Contents
+
+- [Description](#description)
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+AuctionBay is a full-stack auction web application that enables users to create and manage events for auctions. Registered users can create auction events by providing images, event titles, descriptions, starting prices, and auction durations. Bidders can participate in auctions, place bids, and view the status of their bids. Bids are incrementally increased until reaching the user's specified maximum bid. The highest bid at the end of the auction period wins the item. Sellers can manage their auction events and view bidding histories.
 
-## Installation
+This backend repository provides RESTful APIs to support the functionalities mentioned above. It is built using NestJS, a progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
 
-```bash
-$ npm install
-```
+## Features
 
-## Running the app
+- User authentication and authorization
+- CRUD operations for auction events
+- Bidding functionality with automatic bid increment
+- Real-time updates for auction status
+- Seller dashboard to manage auctions and view bidding histories
+- User-friendly API endpoints with detailed documentation
 
-```bash
-# development
-$ npm run start
+## Setup
 
-# watch mode
-$ npm run start:dev
+To set up the AuctionBay backend locally, follow these steps:
 
-# production mode
-$ npm run start:prod
-```
+1. Clone this repository to your local machine:
 
-## Test
+   ```bash
+   git clone https://github.com/your-username/auctionbay-backend.git
+   ```
 
-```bash
-# unit tests
-$ npm run test
+2. Navigate into the project directory:
 
-# e2e tests
-$ npm run test:e2e
+   ```bash
+   cd auctionbay-backend
+   ```
 
-# test coverage
-$ npm run test:cov
-```
+3. Install dependencies using npm or yarn:
 
-## Support
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+4. Configure environment variables by creating a `.env` file based on the provided `.env.example`.
 
-## Stay in touch
+5. Set up your database connection and ensure it is running.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+6. Run the application in development mode:
 
-## License
+   ```bash
+   npm run start:dev
+   # or
+   yarn start:dev
+   ```
 
-Nest is [MIT licensed](LICENSE).
+The backend server should now be running locally on `http://localhost:8080`.
+
+## Usage
+
+Once the backend server is running, you can start using the AuctionBay web application by integrating it with the frontend or testing the endpoints using tools like Postman.
+
+
+This Markdown file provides a comprehensive README for your AuctionBay backend project. You can adjust the content, URLs, or formatting as needed.

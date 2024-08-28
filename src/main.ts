@@ -18,7 +18,7 @@ async function bootstrap() {
     credentials: true,
   });
 
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true }))
 
   // Use cookie-parser middleware
   app.use(cookieParser());
