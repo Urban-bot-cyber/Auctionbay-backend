@@ -74,5 +74,13 @@ export class UsersService {
           data: { password: hashedPassword },
         });
       }
+
+      async updateAvatar(id: string, filePath: string) {
+        return this.prisma.user.update({
+          where: { id },
+          data: { avatar: filePath },
+        })
+      }
+    
 }
 
